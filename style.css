@@ -1,0 +1,164 @@
+:root {
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: hsl(220, 14%, 75%);
+}
+
+html,
+body {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 16px;
+}
+
+.header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid hsl(223, 64%, 98%);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu_icon {
+    cursor: pointer;
+}
+
+.menu_icon img {
+    width: 30px;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.cart>img {
+    width: 100%;
+}
+
+.avatar {
+    width: 40px;
+    cursor: pointer;
+}
+
+.avatar>img {
+    width: 100%;
+    border: 2px solid hsl(220, 14%, 75%);
+    border-radius: 50%;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.menu-container>div {
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    height: 100%;
+}
+
+
+.menu-container.active {
+    transform: translateX(0);
+}
+
+.close-icon {
+    padding: 15px;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .nav-links li {
+    padding: 15px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: hsl(220, 13%, 13%);
+    font-weight: 700;
+   
+}
+
+.nav-links li a:hover {
+    padding-bottom: 3px;
+    border-bottom: 2px solid hsl(26, 100%, 55%);
+    transition: all 0.5s ease;
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .menu_icon,
+    .close-icon {
+        display: none;
+    }
+
+    .menu-container {
+        display: block;
+        position: static;
+        transform: none;
+        width: 20px;
+        height: auto;
+
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+
+    }
+
+    .nav-links li a {
+        color: hsl(219, 9%, 45%) !important;
+        /* Override color to grey when min-width is 700px */
+    }
+}
