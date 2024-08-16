@@ -1,0 +1,5 @@
+{
+  "scss.format.spaceAroundSelectorSeparator": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true
+}

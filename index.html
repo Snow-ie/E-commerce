@@ -2,61 +2,184 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 
-    <title>Frontend Mentor | E-commerce product page</title>
+    <title>Frontend Mentor | E-commerce Product Page</title>
 </head>
 
 <body>
-
     <header class="header">
         <div class="container">
             <div class="logo-container">
                 <button class="menu_icon">
-                    <img src="images/icon-menu.svg" alt="" srcset="" class="image" id="hamburger">
+                    <img src="images/icon-menu.svg" alt="Menu Icon" class="image" id="hamburger" />
                 </button>
-                <div><img src="images/logo.svg" alt="" srcset="" class="logo"></div>
+                <div>
+                    <img src="images/logo.svg" alt="Logo" class="logo" />
+                </div>
                 <div class="menu-container hidden">
                     <div>
-                        <div class="close-icon"><img src="images/icon-close.svg" alt="" srcset="" class="close-btn">
+                        <div class="close-icon">
+                            <img src="images/icon-close.svg" alt="Close Icon" class="close-btn" />
                         </div>
                         <nav class="navbar">
                             <ul class="nav-links">
-                                <li> <a href="/collections.html">Collections</a> </li>
-                                <li> <a href="/men.html">Men</a> </li>
-                                <li> <a href="/women.html">Women</a></li>
-                                <li> <a href="/about.html"> About</a></li>
-                                <li> <a href="/contact.html">Contact</a> </li>
+                                <li>
+                                    <a href="/collections.html">Collections</a>
+                                </li>
+                                <li><a href="/men.html">Men</a></li>
+                                <li><a href="/women.html">Women</a></li>
+                                <li><a href="/about.html">About</a></li>
+                                <li><a href="/contact.html">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
             <div class="cart-container">
-                <div class="cart"><img src="images/icon-cart.svg" alt="" srcset="" class="image" id="cart"></div>
-                <div class="avatar"><img src="images/image-avatar.png" alt="" srcset="" class="image"></div>
+                <div class="cartB">
+                    <img src="images/icon-cart.svg" alt="Cart Icon" class="image" id="cart" />
+                    <div class="notification">0</div>
+                    <!-- Rendered cart that's been selected -->
+                    <div class="cart hide">
+                        <div class="name">Cart</div>
+                    </div>
+                </div>
+                <div class="avatar">
+                    <img src="images/image-avatar.png" alt="Avatar" class="image" />
+                </div>
             </div>
+        </div>
     </header>
 
-    <div class="body">
-        <div class="img-container">
-            <img src="images/icon-previous.svg" alt="" srcset="" class="previous-btn">
-            <img src="images/icon-next.svg" alt="" srcset="" class="next-btn">
-      <img src="images/image-product-1.jpg" alt="" srcset="" class="display-img">
+    <main>
+        <section class="product">
+            <div class="product-container">
+                <div>
+                    <div>
+                        <div style="position: relative">
+                            <div class="img-container">
+                                <img class="display-img" src="images/image-product-1.jpg"
+                                    alt="Displayed Product Image" />
+                            </div>
+                            <div class="slider-btn-container">
+                                <div class="container">
+                                    <div class="previous-btn">
+                                        <img src="images/icon-previous.svg" alt="Previous Icon" />
+                                    </div>
+                                    <div class="next-btn">
+                                        <img src="images/icon-next.svg" alt="Next Icon" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="thumbnailsContainer">
+                            <div class="thumbnails">
+                                <img src="images/image-product-1-thumbnail.jpg" alt="Product 1 Thumbnail"
+                                    class="active" />
+                            </div>
 
+                            <div class="thumbnails">
+                                <img src="images/image-product-2-thumbnail.jpg" alt="Product 2 Thumbnail" />
+                            </div>
 
+                            <div class="thumbnails">
+                                <img src="images/image-product-3-thumbnail.jpg" alt="Product 3 Thumbnail" />
+                            </div>
 
-    </div>
+                            <div class="thumbnails">
+                                <img src="images/image-product-4-thumbnail.jpg" alt="Product 4 Thumbnail" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article>
+                    <div class="container">
+                        <div class="details">
+                            <p class="company">SNEAKER COMPANY</p>
+                            <h2 class="product">
+                                Fall Limited Edition Sneakers
+                            </h2>
+                            <p class="sneakers-detail">
+                                These low-profile sneakers are your perfect
+                                casual wear companion. Featuring a durable
+                                rubber outer sole, they'll withstand
+                                everything the weather can offer.
+                            </p>
+                            <div class="pricing-plan">
+                                <div class="pricing_discount">
+                                    <p>$125.00</p>
+                                    <p>50%</p>
+                                </div>
+                                <p>$250.00</p>
+                            </div>
 
-    </div>
+                            <div class="item-number-container">
+                                <div class="addtocart">
+                                    <img src="images/icon-minus.svg" alt="Minus Icon" class="minus-btn" />
+
+                                    <span class="item-number">0</span>
+                                    <img src="images/icon-plus.svg" alt="Plus Icon" class="plus-btn" />
+                                </div>
+                                <div>
+                                    <button id="button">
+                                        <img src="./images/icon-cart.svg" alt="Cart Icon" />Add to cart
+                                    </button>
+                                </div>
+                                <div class="message message1">
+                                    Items added to cart successfully!
+                                </div>
+                                <div class="message message2">
+                                    Please select how many items to add,
+                                    then try again
+                                </div>
+                                <div class="message message3">
+                                    Item(s) deleted from your cart
+                                    successfully!!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <section class="light-box" hide>
+        <!-- Close button -->
+        <img src="images/icon-close.svg" alt="Close Button" class="close" />
+        <!-- Large image section with navigation buttons -->
+        <div class="large-image">
+            <img src="images/icon-previous.svg" alt="Previous Button" class="previous-Btn previous" />
+            <img src="images/icon-next.svg" alt="Next Button" class="next-Btn next" />
+            <img src="images/image-product-1.jpg" alt="Current Product Image" class="show-img" id="current-image" />
+        </div>
+        <!-- Thumbnails for selecting images -->
+        <div id="light-box-images">
+            <img src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1" class="images image1"
+                data-large="images/image-product-1.jpg" /> 
+                
+            <img src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 2" class="images image2"
+                data-large="images/image-product-2.jpg" />
+            <img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 3" class="images image3"
+                data-large="images/image-product-3.jpg" />
+            <img src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 4" class="images image4"
+                data-large="images/image-product-4.jpg" />
+        </div>
+        </div>
+        </div>
+    </section>
     <script src="scripts/script.js"></script>
+    <script src="scripts/carts.js"></script>
+    <script src="scripts/lightbox.js"></script>
 </body>
 
 </html>
