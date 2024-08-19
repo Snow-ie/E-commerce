@@ -4,6 +4,7 @@ const lightbox = document.querySelector(".light-box");
 const closeBtn = document.querySelector(".light-box .close");
 const largeImage = document.querySelector(".light-box .show-img");
 const thumbnails = document.querySelectorAll("#light-box-images .images");
+const thumbnails2 = document.querySelectorAll(".thumbnails");
 const prevBtn = document.querySelector(".light-box .previous");
 const nextBtn = document.querySelector(".light-box .next");
 
@@ -12,14 +13,18 @@ let currentIndex = 0;
 
 // Function to open the lightbox
 function openLightbox(index) {
-    lightbox.classList.remove("hide");
+    if (!lightbox.classList.contains("active")) {
+        lightbox.classList.add("active");
+        console.log("Calleds");
+    }
     currentIndex = index;
+    console.log("object");
     updateLargeImage(thumbnails[currentIndex].dataset.large);
 }
 
 // Function to close the lightbox
 function closeLightbox() {
-    lightbox.classList.add("hide");
+    lightbox.classList.remove("active");
 }
 
 // Function to update the large image
@@ -45,6 +50,12 @@ nextBtn.addEventListener("click", () => {
 
 // Event listeners to update the large image when a thumbnail is clicked
 thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+        openLightbox(index);
+    });
+});
+
+thumbnails2.forEach((thumbnail, index) => {
     thumbnail.addEventListener("click", () => {
         openLightbox(index);
     });

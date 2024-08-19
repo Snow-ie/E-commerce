@@ -366,6 +366,112 @@ b,
     display: block;
     transform: translateX(0px);
 }
+/* Lightbox styling */
+.light-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.light-box.active {
+    display: flex;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 20px;
+}
+
+.large-image {
+    position: relative;
+    max-width: 70%;
+    max-height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.PrevBtn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    display: flex;
+    left: -70px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+.NextBtn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    display: flex;
+    right: -70px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#light-box-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.images {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.images:hover,
+.images.active {
+    border-color: hsl(220, 14%, 75%);
+    /* transform: translateY(-3px);
+    opacity: 0.5;
+    transition: transform 0.5s ease-in; */
+}
 
 /* .open {
     transform: translateX(0%);
@@ -473,94 +579,5 @@ b,
     }*/
     article .container {
         width: 100%;
-    }
-    /* Lightbox styling */
-    .light-box {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        transition: all 0.3s ease;
-    }
-
-    .hide {
-        display: none;
-    }
-
-    .close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-        width: 20px;
-    }
-
-    .large-image {
-        position: relative;
-        max-width: 70%;
-        max-height: 70%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .show-img {
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 10px;
-    }
-
-    .previous-Btn,
-    .next-Btn {
-        position: absolute;
-        top: 50%;
-        /* display: flex;
-    align-items: center;
-    justify-content: center; */
-        background-color: #fff;
-        border-radius: 100%;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .previous-Btn {
-        left: -50px;
-        transform: translateX(-20px);
-    }
-
-    .next-Btn {
-        right: -50px;
-        transform: translateX(20px);
-    }
-
-    #light-box-images {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .images {
-        width: 60px;
-        height: 60px;
-        margin: 0 10px;
-        cursor: pointer;
-        border-radius: 10px;
-        border: 2px solid transparent;
-        transition: border-color 0.3s ease;
-    }
-
-    .images:hover,
-    .images.active {
-        border-color: #ff7e1b;
     }
 }
